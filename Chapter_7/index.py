@@ -227,8 +227,7 @@ def show_hidden_word_2(secret_word,old_letters_guessed):
 
 
 
-#7.3.2
-
+#7.3.2 check if user won
 def check_win(secret_word,old_letters_guessed):
     for letter in secret_word:
         if letter not in old_letters_guessed:
