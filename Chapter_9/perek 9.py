@@ -66,7 +66,7 @@
 
 def game():
     file_path = input("enter a file path : ")
-    loc_word = int(input("enter a number : ")
+    loc_word = int(input("enter a number : "))
 
 game()
 
