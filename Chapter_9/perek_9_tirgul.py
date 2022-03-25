@@ -75,7 +75,7 @@
 
 def choose_word(file_path,index):
     
-    a = open("./myInputFiles\secret_words.txt","r")
+    a = open("./myInputFiles/secret_words.txt","r")
     x=a.readline()
     x=a.readline()
     length = len(x)

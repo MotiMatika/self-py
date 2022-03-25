@@ -55,8 +55,11 @@
 # try_update_letter_guessed('$', old_letters)
 
 # 9.4.1
+import os
+dirname = os.path.dirname(__file__)
 def choose_word(file_path, index):                  #הגדרת הפונקציה- 2 ערכים : נתיב ומיקום המילה בתוך הרשימה
-    read_txt = open(file_path)                      #פתיחת הקובץ לקריאה עם מילים לניחוש
+    filename = os.path.join(dirname, file_path)
+    read_txt = open(filename)                      #פתיחת הקובץ לקריאה עם מילים לניחוש
     content = read_txt.read()                       #הכנסת הרשימה למשתנה
     all_words = content.split(" ")                  #הפרדת הקובץ למילים בתוך מערך/רשימה
     unique_words = list(dict.fromkeys(all_words))   #ביטול הכפילויות ע"י הפיכת המערך למילון,ואח"כ הפיכת המילון לרשימה
