@@ -37,28 +37,28 @@
 #     print(i) #מדפיס שורה אחר שורה 
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#9.1.2
-file1 = open("./myInputFiles\secret_words.txt","r")
-x=file1.readlines()# קורא את כל הקובץ
-pressed = input("your wish: sort,rev or last : ")
+# #9.1.2
+# file1 = open("./myInputFiles\secret_words.txt","r")
+# x=file1.readlines()# קורא את כל הקובץ
+# pressed = input("your wish: sort,rev or last : ")
 
-if pressed=="sort":
-    print(x[:])
-    print(len(x))
-    a=x[0]
-    a.rsplit()
-    print(a[2])
-    # b=list(a)
-    # b.sort()
-    # print(b)
-    # a=t[4]
-    # print(a)
+# if pressed=="sort":
+#     print(x[:])
+#     print(len(x))
+#     a=x[0]
+#     a.rsplit()
+#     print(a[2])
+#     # b=list(a)
+#     # b.sort()
+#     # print(b)
+#     # a=t[4]
+#     # print(a)
 
-elif pressed=="rev":
-    a=str(x) 
-    b=list(a)
-    b.reverse()
-    print(b)
+# elif pressed=="rev":
+#     a=str(x) 
+#     b=list(a)
+#     b.reverse()
+#     print(b)
 # elif pressed=="last":
 #     print(x.lasl)
 
@@ -73,17 +73,17 @@ elif pressed=="rev":
 
 #9.4.1
 
-# def choose_word(file_path,index):
+def choose_word(file_path,index):
     
-# a = open("./myInputFiles\secret_words.txt","r")
-# x=a.readline()
-# x=a.readline()
-# length = len(x)
-# print(x)
+    a = open("./myInputFiles\secret_words.txt","r")
+    x=a.readline()
+    x=a.readline()
+    length = len(x)
+    print(x)
 
 
-# print(x)
-# print(choose_word("./myInputFiles\secret_words.txt",2) )  
+    print(x)
+print(choose_word("./myInputFiles\secret_words.txt",2) )  
 
 
 

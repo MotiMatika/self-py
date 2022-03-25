@@ -1,58 +1,58 @@
-# 7.3.2 check if user won
-def check_win(secret_word,old_letters_guessed):
-    for letter in secret_word:
-        if letter not in old_letters_guessed:
-            return False
-    return True
+# # 7.3.2 check if user won
+# def check_win(secret_word,old_letters_guessed):
+#     for letter in secret_word:
+#         if letter not in old_letters_guessed:
+#             return False
+#     return True
 
-# 7.3.1
-def show_hidden_word(secret_word,old_letters_guessed):
-    res = []
-    is_guessed = False
-    for letter in secret_word:
-        for old_letter in old_letters_guessed:
-            if old_letter == letter:
-                res.append(old_letter)
-                is_guessed = True
-                break
-        if not is_guessed:
-            res.append("_")
-        is_guessed = False
-    return ' '.join(res)
+# # 7.3.1
+# def show_hidden_word(secret_word,old_letters_guessed):
+#     res = []
+#     is_guessed = False
+#     for letter in secret_word:
+#         for old_letter in old_letters_guessed:
+#             if old_letter == letter:
+#                 res.append(old_letter)
+#                 is_guessed = True
+#                 break
+#         if not is_guessed:
+#             res.append("_")
+#         is_guessed = False
+#     return ' '.join(res)
 
-# 6.4.1
-def check_valid_input(letter_guessed,old_letter_guessed):
-    char = letter_guessed.isalpha()         
-    num = len(letter_guessed)  
-    if num == 1 and char == True and letter_guessed.isascii() and letter_guessed not in old_letter_guessed:
-        return True
-    else:
-        return False 
-print(check_valid_input("a",["b","w"]))
+# # 6.4.1
+# def check_valid_input(letter_guessed,old_letter_guessed):
+#     char = letter_guessed.isalpha()         
+#     num = len(letter_guessed)  
+#     if num == 1 and char == True and letter_guessed.isascii() and letter_guessed not in old_letter_guessed:
+#         return True
+#     else:
+#         return False 
+# print(check_valid_input("a",["b","w"]))
 
-# 6.4.2
-def try_update_letter_guessed(letter_guessed, old_letters_guessed):
-    lower_char= letter_guessed.casefold()
-    if check_valid_input(lower_char,old_letters_guessed):
-        old_letters_guessed.append(lower_char)
-        return True
-    else:
-        print("X")
-        print_guessed_letters(old_letters_guessed)
-        return False
+# # 6.4.2
+# def try_update_letter_guessed(letter_guessed, old_letters_guessed):
+#     lower_char= letter_guessed.casefold()
+#     if check_valid_input(lower_char,old_letters_guessed):
+#         old_letters_guessed.append(lower_char)
+#         return True
+#     else:
+#         print("X")
+#         print_guessed_letters(old_letters_guessed)
+#         return False
 
-# Relevant to 6.4.2
-def print_guessed_letters(old_letters):
-    old_letters.sort()
-    stam=""
-    for x in old_letters:
-        stam=stam+x+" -> "
-    length=len(stam)
-    y=stam[:length-4]
-    print(y)
+# # Relevant to 6.4.2
+# def print_guessed_letters(old_letters):
+#     old_letters.sort()
+#     stam=""
+#     for x in old_letters:
+#         stam=stam+x+" -> "
+#     length=len(stam)
+#     y=stam[:length-4]
+#     print(y)
 
-old_letters = ['a', 'p', 'c', 'f']
-try_update_letter_guessed('$', old_letters)
+# old_letters = ['a', 'p', 'c', 'f']
+# try_update_letter_guessed('$', old_letters)
 
 # 9.4.1
 def choose_word(file_path, index):                  #הגדרת הפונקציה- 2 ערכים : נתיב ומיקום המילה בתוך הרשימה
