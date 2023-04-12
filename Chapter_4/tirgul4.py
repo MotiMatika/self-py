@@ -12,20 +12,20 @@
 
 
 #4.2.3
-temp = input("Your Temp : ")
-temp1 = float(temp)
-scale = input("if You Want to Conver from Fahrenheit to Celsius type F or f\n if You Want to Conver from Celsius to Fahrenheit type C or c : ")
-scale1 = scale.lower()
-if "f" == scale1:
-    #print("You Want to Convert Fahrenheit to Celsius ")
-    c = (5*temp1-160)/9
-    #print(temp, " in Fahrenheit is :", c, " in Celsius")
-    print(c)
-else:
-    #print("You Want to Convert Celsius to  Fahrenheit ")
-    c = (9*temp1+160)/5
-    #print(temp, " in Celsius is :", c, " in Fahrenheit")
-    print(c)
+# temp = input("Your Temp : ")
+# temp1 = float(temp)
+# scale = input("if You Want to Conver from Fahrenheit to Celsius type F or f\n if You Want to Conver from Celsius to Fahrenheit type C or c : ")
+# scale1 = scale.lower()
+# if "f" == scale1:
+#     #print("You Want to Convert Fahrenheit to Celsius ")
+#     c = (5*temp1-160)/9
+#     #print(temp, " in Fahrenheit is :", c, " in Celsius")
+#     print(c)
+# else:
+#     #print("You Want to Convert Celsius to  Fahrenheit ")
+#     c = (9*temp1+160)/5
+#     #print(temp, " in Celsius is :", c, " in Fahrenheit")
+#     print(c)
 
 
 # txt = input("please Enter a String : ")         #קלט של מחרוזת
@@ -62,3 +62,21 @@ else:
 # import datetime               #ייבוא ספרייה
 # x = datetime.datetime(y,m,d)  #אובייקט שמקבל 3 ערכים של שנה,חודש ויום כמספרים שלמים
 # print(x.strftime("%A"))       # מוצא את היום המדובר
+
+
+
+
+
+
+
+
+temp = input("\nYour Temp : ")
+temp1 = float(temp)
+scale = input("\n Celsius to Fahrenheit type F or f\n Fahrenheit to Celsius type C or c : ")
+scale1 = scale.lower()
+if "c" == scale1:
+    c = (5*temp1-160)/9
+    print("\nYour temp is :",c,"Fahrenheit")
+else:
+    c = (9*temp1+160)/5
+    print("\nYour temp is :",c,"Fahrenheit")
